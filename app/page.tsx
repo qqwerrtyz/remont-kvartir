@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useState } from "react";
 
 const menu = [
@@ -126,19 +127,21 @@ export default function Page() {
       <header className="siteHeader">
         <div className="container headerInner">
           <a href="#top" className="brand">
-            <span className="brandMark">■</span>
-            <span className="brandText">
-              <strong>RE:MODEL</strong>
-              <small>ремонт квартир под ключ</small>
-            </span>
+            
+            <Image alt="logo" width={120} height={100} style={{height: "auto",   backgroundColor: "#888888",}} className="logoMain" src="/logo.png"/>
           </a>
 
           <nav className="desktopNav" aria-label="Основная навигация">
+            <a style={{fontWeight: 600}} href={"https://vk.com/mh_remont"}>
+                ВКонтакте
+            </a>
             {menu.map((item) => (
               <a key={item.href} href={item.href}>
                 {item.label}
               </a>
             ))}
+
+            
           </nav>
 
           <div className="headerActions">
@@ -535,13 +538,94 @@ export default function Page() {
             </p>
           </form>
         </div>
-      </section> */}
+      </section>  */}
+
+      <section id="contact" className="contactSection">
+  <div className="container contactGrid">
+    <div className="contactContent">
+      <div className="sectionLabel">финальный шаг</div>
+
+      <h2 className="sectionTitle">
+        Обсудите объект с прорабом и получите понимание бюджета до старта
+      </h2>
+
+      <p className="sectionText">
+        Позвоните нам — кратко расскажем, с чего начать ремонт, какие этапы
+        нужны именно вашему объекту и как формируется стоимость ремонта под ключ.
+      </p>
+
+      <div className="contactBenefits">
+        <div>
+          <strong>1 звонок</strong>
+          <span>чтобы понять формат ремонта и следующий шаг</span>
+        </div>
+
+        <div>
+          <strong>1 подрядчик</strong>
+          <span>вместо десятка отдельных исполнителей</span>
+        </div>
+
+        <div>
+          <strong>1 результат</strong>
+          <span>готовая квартира под заселение</span>
+        </div>
+      </div>
+    </div>
+
+    <div className="contactCallCard">
+      <div className="callCardTop">
+        <div className="callIcon">☎</div>
+        <div>
+          <span>связаться напрямую</span>
+          <strong>Позвоните прорабу</strong>
+        </div>
+      </div>
+
+      <a href="tel:+79999999999" className="contactPhone">
+        +7 (918) 136-17-77
+      </a>
+
+      <p className="callCardText">
+        Расскажите площадь, состояние квартиры и желаемый формат ремонта.
+        Подскажем, подходит ли объект под ремонт под ключ.
+      </p>
+
+      <div className="callChecklist">
+        <div>
+          <span>01</span>
+          <p>Уточним состояние объекта</p>
+        </div>
+
+        <div>
+          <span>02</span>
+          <p>Расскажем порядок работ</p>
+        </div>
+
+        <div>
+          <span>03</span>
+          <p>Сориентируем по бюджету</p>
+        </div>
+      </div>
+
+      <a href="tel:+79999999999" className="button buttonPrimary buttonBlock">
+        Позвонить
+      </a>
+
+      <p className="callHint">
+        Работаем только с комплексным ремонтом под ключ. Частичные работы не берём.
+      </p>
+    </div>
+  </div>
+</section>
 
       <footer className="siteFooter">
         <div className="container footerGrid">
           <div className="footerBrand">
-            <strong>RE:MODEL</strong>
-            <span>ремонт квартир под ключ</span>
+            <a href="#top" className="brand">
+
+            <Image alt="logo" width={120} height={100} style={{height: "auto",   backgroundColor: "#888888",}} className="logoMain" src="/logo.png"/>
+            </a>
+            
           </div>
 
           <div className="footerText">
